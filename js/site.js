@@ -16,7 +16,7 @@ function getValues() {
     buzzNumber = parseInt(buzzNumber); //0
     endNumber = parseInt(endNumber);  // 100
 
-    if (Number(endNumber) >5000) {
+    if (Number(endNumber) > 5000) {
         Swal.fire({
             icon: 'error',
             title: 'Whoa!',
@@ -40,73 +40,62 @@ function getValues() {
 
 }
 
-    //generate a list of all numbers between the start and end
-    function generateValues(end) {
-        // create a variable that can hold a bunch of numbers
-        let numbers = [];
+//generate a list of all numbers between the start and end
+function generateValues(end) {
+    // create a variable that can hold a bunch of numbers
+    let numbers = [];
 
-        // put a number into that variable 
-        // add one to that number, then add that to the variable.
-        // keep adding one and putting it inot the variable until we get to the end number
-        for (let n = 1; n <= end; n = n + 1) {
+    // put a number into that variable 
+    // add one to that number, then add that to the variable.
+    // keep adding one and putting it inot the variable until we get to the end number
+    for (let n = 1; n <= end; n = n + 1) {
 
-            numbers.push(n);
+        numbers.push(n);
+    }
+
+    //somhow tell displayvalues to show those numbers???
+
+    return numbers;
+
+}
+
+// display each of those numbers on the page
+function displayValues(fizz, buzz, numbers) {
+
+    let html = '';
+    let className = '';
+
+
+    // make a loop to get each number from the array
+    for (let index = 0; index < numbers.length; index = index += 1) {
+
+        let currentNumber = numbers[index];
+
+        if (currentNumber % fizz == 0 && currentNumber % buzz == 0) {
+
+            html += `<tr><td> ${currentNumber} FizzBuzz ! </td> </tr>`
+
+        } else if (currentNumber % fizz == 0) {
+            html += `<tr><td> ${currentNumber}Fizz </td></tr>`;
         }
+        else if (currentNumber % buzz == 0) {
+            html += `<tr><td> ${currentNumber}Buzz</td></tr>`;
+        } else (html += `<tr><td >${currentNumber}</td></tr>`);
 
-        //somhow tell displayvalues to show those numbers???
-
-        return numbers;
 
     }
 
-    // display each of those numbers on the page
-    function displayValues(fizz, buzz, numbers) {
-
-        let html = '';
-        let className = '';
 
 
-        // make a loop to get each number from the array
-        for (let index = 0; index < numbers.length; index = index += 1) {
+    let tbody = document.getElementById('results');
 
-            let currentNumber = numbers[index];
-
-            if (currentNumber % fizz == 0 && currentNumber % buzz == 0) {
-
-                html += `<tr><td> ${currentNumber} FizzBuzz ! </td> </tr>`
-
-            } else if (currentNumber % fizz == 0) {
-                html += `<tr><td> ${currentNumber}Fizz </td></tr>`;
-            }
-            else if (currentNumber % buzz == 0) {
-                html += `<tr><td> ${currentNumber}Buzz</td></tr>`;
-            } else (html += `<tr><td >${currentNumber}</td></tr>`);
+    tbody.innerHTML = html;
+    // tbody.innerHTML = 'Hi Tom';
 
 
+    /*
+        NOTES:
+        -make the even numbers bold
+    */
 
-            // if (currentNumber % 3 == 0) {
-            //     html += `<tr><td> ${currentNumber} fizz </td></tr>`;
-            // } else if (currentNumber % 5 == 0) {
-            //     html += `<tr><td> ${currentNumber}buzz </td></tr>`;
-            // } else if (currentNumber % 5 == 0 && currentNumber % 3 == 0){
-            //     html += `<tr><td> ${currentNumber}FizzBuzz! </td></tr>`;
-            // }
-            //  html += `<tr><td class="${className}">${currentNumber}</td></tr>`;
-            // html += `<tr><td >${currentNumber}</td></tr>`;
-
-        }
-
-
-
-        let tbody = document.getElementById('results');
-
-        tbody.innerHTML = html;
-        // tbody.innerHTML = 'Hi Tom';
-
-
-        /*
-            NOTES:
-            -make the even numbers bold
-        */
-
-    }
+}
