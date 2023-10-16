@@ -80,8 +80,12 @@ function displayValues(fizz, buzz, numbers) {
         }
         else if (currentNumber % buzz == 0) {
             html += `<tr><td> ${currentNumber}Buzz</td></tr>`;
-        } else (html += `<tr><td >${currentNumber}</td></tr>`);
+        } 
+        
+        else (html += `<tr><td >${currentNumber}</td></tr>`);
 
+        // html += `<tr><td class="${className}">${currentNumber}</td></tr>`;
+        html += `<tr><td class="${className}">${currentNumber}</td></tr>`;
 
     }
 
