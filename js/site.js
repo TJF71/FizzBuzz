@@ -73,19 +73,19 @@ function displayValues(fizz, buzz, numbers) {
 
         if (currentNumber % fizz == 0 && currentNumber % buzz == 0) {
 
-            html += `<tr><td> ${currentNumber} FizzBuzz ! </td> </tr>`
+            html += `<div class ="col"> FizzBuzz ! </div>`
 
         } else if (currentNumber % fizz == 0) {
-            html += `<tr><td> ${currentNumber}Fizz </td></tr>`;
+            html += `<div class ="col"> Fizz </div>`;
         }
         else if (currentNumber % buzz == 0) {
-            html += `<tr><td> ${currentNumber}Buzz</td></tr>`;
+            html += `<div class ="col"> Buzz</div>`;
         } 
         
-        else (html += `<tr><td >${currentNumber}</td></tr>`);
+        else (html += `<div class ="col">${currentNumber}</div>`);
 
-        // html += `<tr><td class="${className}">${currentNumber}</td></tr>`;
-        html += `<tr><td class="${className}">${currentNumber}</td></tr>`;
+
+
 
     }
 

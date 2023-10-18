@@ -65,6 +65,18 @@ footer .bi:hover {
 .odd  {
     color: red !important;
 }
+
+
+#results .col {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(1, 0, 0);
+
+}
+
+
+
 /* 
 table {
     display: table;
