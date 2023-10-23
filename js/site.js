@@ -85,8 +85,6 @@ function displayValues(fizz, buzz, numbers) {
         else (html += `<div class ="col">${currentNumber}</div>`);
 
 
-
-
     }
 
 
