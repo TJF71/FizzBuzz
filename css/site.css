@@ -75,7 +75,7 @@ footer .bi:hover {
 
 }
 
-.fizzValue {
+.fizzbuzz {
     background-color: #292004;
     color: var (--tf-light-color);
 }
