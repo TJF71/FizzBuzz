@@ -63,7 +63,6 @@ function generateValues(end) {
 function displayValues(fizz, buzz, numbers) {
 
     let html = '';
-    let className = '';
 
 
     // make a loop to get each number from the array
