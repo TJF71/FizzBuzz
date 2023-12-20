@@ -72,13 +72,13 @@ function displayValues(fizz, buzz, numbers) {
 
         if (currentNumber % fizz == 0 && currentNumber % buzz == 0) {
 
-            html += `<div class ="col"> FizzBuzz! </div>`
+            html += `<div class ="col fizzbuzz"> FizzBuzz! </div>`
 
         } else if (currentNumber % fizz == 0) {
-            html += `<div class ="col"> Fizz </div>`;
+            html += `<div class ="col fizz"> Fizz </div>`;
         }
         else if (currentNumber % buzz == 0) {
-            html += `<div class ="col"> Buzz</div>`;
+            html += `<div class ="col buzz"> Buzz</div>`;
         } 
         
         else (html += `<div class ="col">${currentNumber}</div>`);

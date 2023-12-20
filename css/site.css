@@ -76,10 +76,22 @@ footer .bi:hover {
 }
 
 .fizzbuzz {
-    background-color: #292004;
+    color: #d34420;
     color: var (--tf-light-color);
+    font-weight: bold;
 }
 
+.buzz {
+    color: #35c661;
+    color: var (--tf-light-color);
+    font-weight: bold;
+}
+
+.fizz {
+    color: #457fcc;
+    color: var (--tf-light-color);
+    font-weight: bold;
+}
 
 /* 
 table {
