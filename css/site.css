@@ -67,11 +67,13 @@ footer .bi:hover {
 }
 
 
-#results .col {
+#results .col{
+
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: 1px solid rgb(1, 0, 0);
+    border: 1px solid rgb(1, 0, 0, 0.5);
+    border-radius: 5px;  
 
 }
 
